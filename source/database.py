@@ -35,19 +35,5 @@ class mySQLClass():
                 data_end VARCHAR(40) NOT NULL
             )
         """)
-    
-    def insert(self):
-        pass
-
-    def delete(self):
-        pass
-
-    def update(self):
-        pass
-
-
-    
-
-
 
 mySQL = mySQLClass()
