@@ -2,8 +2,10 @@ import time
 from settings import *
 from user import user
 
+logged = False
+
 def main():
-    while True:
+    while logged:
         print(GWORK_NAME)
         print("Selecciona")
         print("[1] Login")
@@ -29,3 +31,5 @@ def main():
             time.sleep(3)
             main()
             break
+
+        
