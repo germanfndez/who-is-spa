@@ -15,13 +15,10 @@ class Homeworks():
         toModify = {'name':nameA, 'description':descriptionA, 'data_start':data_startA, 'data_end':data_endA}
         for key, value in toModify.items():
             if value != None:
-                print(key)
-                print(value)
-                #TODO create a consult
-                #mySQL.cursor.execute(f"UPDATE users_works SET {key} = {value} WHERE id = {homeworkId}")
-                #mySQL.database.commit()
+                mySQL.cursor.execute(f"UPDATE users_works SET {key} = '{value}' WHERE id = {homeworkId}")
+                mySQL.database.commit()
 
 
 
 homerworkTest = Homeworks(1)
-homerworkTest.modifyHomework(1, nameA="asd")
+homerworkTest.modifyHomework(2, nameA="tarea hisotria", descriptionA="buenardo")
