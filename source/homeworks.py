@@ -18,7 +18,3 @@ class Homeworks():
                 mySQL.cursor.execute(f"UPDATE users_works SET {key} = '{value}' WHERE id = {homeworkId}")
                 mySQL.database.commit()
 
-
-
-homerworkTest = Homeworks(1)
-homerworkTest.modifyHomework(2, nameA="tarea hisotria", descriptionA="buenardo")

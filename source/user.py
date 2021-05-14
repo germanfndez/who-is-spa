@@ -1,4 +1,5 @@
 from database import mySQL
+from homeworks import Homeworks
 
 class User():
     def __init__(self):
@@ -12,8 +13,10 @@ class User():
         result = mySQL.cursor.fetchone()
         if result:
             self.loadUser(email, password)
+            return True
         else:
             print("No existe")
+            return False
         
 
     def register(self, name, email, password):
@@ -21,9 +24,11 @@ class User():
         result = mySQL.cursor.fetchone()
         if result:
             print("Email ya utilizado")
+            return False
         else:
             mySQL.cursor.execute("INSERT INTO users VALUES (null, %s, %s, %s)" , (name, email, password))
-            self.loadUser(email, password)            
+            self.loadUser(email, password)    
+            return True        
 
     def loadUser(self, email, password):
         mySQL.cursor.execute("SELECT * FROM users WHERE email = %s and password = %s", (email, password))
@@ -32,5 +37,6 @@ class User():
         self.name = result[1]
         self.email = result[2]
         self.password = result[3]
-    
-user = User()
+
+        #Load homeworks
+        self.homeworksObj = Homeworks(self.id)
