@@ -69,8 +69,17 @@ def inApp(user):
                     print("No tienes ningun homework anotado")
 
             elif action == 2:
-                print("modify")
-
+                try:
+                    homeworkId = int(input("Homework id to delete: "))
+                    nameA = input("Homework new name")
+                    descriptionA = input("Homework new description")
+                    data_startA = input("Date start")
+                    data_endA = input("Date start")
+                    user.homeworksObj.modifyHomework(homeworkId, nameA, descriptionA, data_startA, data_endA)
+                except:
+                    print("Ha ocurrido un error, intentalo de nuevo")
+                    time.sleep(3)
+                    
             elif action == 3:
                 try:
                     homeworkId = int(input("Homework id to delete: "))
