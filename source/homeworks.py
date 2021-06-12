@@ -12,6 +12,7 @@ class Homeworks():
         self.homeworks = result
 
     def createHomework(self, nameA = None, descriptionA = None, data_startA = None, data_endA = None):
+        #mySQL.cursor.execute("")
         pass
         
     def deleteHomework(self, homeworkId):
