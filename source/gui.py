@@ -2,46 +2,50 @@ import logging
 import time
 from settings import *
 from user import User
+from database import mySQL
 
 logged = None
 
 def main():
     logged = False
-    while not logged:
-        print(GWORK_NAME)
-        print("Selecciona")
-        print("[1] Login")
-        print("[2] Register")
-        print("[3] Exit")
+    if mySQL.connect():
+        while not logged:
+            print(GWORK_NAME)
+            print("Selecciona")
+            print("[1] Login")
+            print("[2] Register")
+            print("[3] Exit")
 
-        try:
-            user = User()
-            action = int(input("Acction: "))
-            if action == 1:
-                email = str(input("Email : "))
-                password = str(input("Password : "))
-                if user.login(email, password):
-                    inApp(user)
+            try:
+                user = User()
+                action = int(input("Acction: "))
+                if action == 1:
+                    email = str(input("Email : "))
+                    password = str(input("Password : "))
+                    if user.login(email, password):
+                        inApp(user)
+                        break
+
+                elif action == 2:
+                    name = str(input("Name : "))
+                    email = str(input("Email : "))
+                    password = str(input("Password : "))
+                    if user.register(name, email, password):
+                        inApp(user)
+                        break
+
+                elif action == 3:
                     break
-
-            elif action == 2:
-                name = str(input("Name : "))
-                email = str(input("Email : "))
-                password = str(input("Password : "))
-                if user.register(name, email, password):
-                    inApp(user)
-                    break
-
-            elif action == 3:
+                else:
+                    print("Opcion no encontrada")
+                    time.sleep(5)
+            except:
+                print("Ha ocurrido un error, intentalo de nuevo")
+                time.sleep(3)
+                main()
                 break
-            else:
-                print("Opcion no encontrada")
-                time.sleep(5)
-        except:
-            print("Ha ocurrido un error, intentalo de nuevo")
-            time.sleep(3)
-            main()
-            break
+    else:
+        print("Error DATABASE-CONNECTION")
 
 def inApp(user):
     logged = True
