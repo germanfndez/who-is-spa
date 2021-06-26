@@ -1,19 +1,24 @@
 import mysql.connector as mysql
+from mysql.connector import constants
 from settings import *
 
 class mySQLClass():
 
-    def __init__(self):
-        self.database = mysql.connect(
-            host = DATABASE_HOST,
-            user = DATABASE_USER,
-            passwd = DATABASE_PASS,
-            database = DATABASE_DATABASE
-        )
+    def connect(self):
+        try:
+            self.database = mysql.connect(
+                host = DATABASE_HOST,
+                user = DATABASE_USER,
+                passwd = DATABASE_PASS,
+                database = DATABASE_DATABASE
+            )
 
-        self.cursor = self.database.cursor(buffered=True)
+            self.cursor = self.database.cursor(buffered=True)
 
-        self.createTables()
+            self.createTables()
+        except:
+            return False
+
 
     def createTables(self):
         self.cursor.execute("""
