@@ -45,7 +45,7 @@ def main():
                 main()
                 break
     else:
-        print("Error DATABASE CONNECTION")
+        print("Error DATABASE-CONNECTION")
 
 def inApp(user):
     logged = True
