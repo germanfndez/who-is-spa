@@ -1,4 +1,4 @@
-from database import mySQL
+from .database import mySQL
 
 class Homeworks(): 
     def __init__(self, userId):

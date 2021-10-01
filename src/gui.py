@@ -1,8 +1,8 @@
 import logging
 import time
-from settings import *
-from user import User
-from database import mySQL
+from .settings import *
+from .user import User
+from .database import mySQL
 
 logged = None
 

@@ -1,6 +1,5 @@
 import mysql.connector as mysql
-from mysql.connector import constants
-from settings import *
+from .settings import *
 
 class mySQLClass():
 

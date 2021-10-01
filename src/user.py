@@ -1,5 +1,5 @@
-from database import mySQL
-from homeworks import Homeworks
+from .database import mySQL
+from .homeworks import Homeworks
 
 class User():
     def __init__(self):
