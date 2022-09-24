@@ -1,8 +1,8 @@
 export const Frameworks = async () => {
   return `
-  <section class='home'>
-    <h1 class='home-title'>SPA frameworks</h1>
-    <p class='home-description'>These SPA frameworks incorporate a set of tools and libraries for avoiding repetitive coding. In addition, they also support unit testing, automated data binding, URL routing and HTML tag manipulation. SPA frameworks have been steadily gaining popularity, especially for businesses and startups.</p>
+  <section class='general-container'>
+    <h1 class='general-title'>Frameworks</h1>
+    <p class='general-description'>These SPA frameworks incorporate a set of tools and libraries for avoiding repetitive coding. In addition, they also support unit testing, automated data binding, URL routing and HTML tag manipulation. SPA frameworks have been steadily gaining popularity, especially for businesses and startups.</p>
     <article class='frameworks-container'>
       <a href='/#frameworks/vue'><svg class='frameworks-icon' width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
       <title>Vue Logo</title>
