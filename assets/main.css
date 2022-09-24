@@ -38,11 +38,6 @@ header {
   transition: 0.2s;
 }
 
-.header-item:hover {
-  text-decoration: underline;
-  color: var(--colors_white);
-}
-
 .header-title {
   font-size: 1.7rem;
   font-weight: bold;
@@ -86,10 +81,6 @@ header > ul {
   transition: 0.2s;
 }
 
-.general-description > a:hover {
-  color: var(--colors_white);
-}
-
 .general-button {
   background-color: var(--colors_white);
   display: flex;
@@ -102,13 +93,6 @@ header > ul {
   border-radius: 12px;
   font-size: 1.4rem;
   transition: 0.2s;
-}
-
-.general-button:hover {
-  background-color: var(--colors_black);
-  color: var(--colors_white);
-  border: 0.2rem solid rgb(255, 255, 255);
-  fill: var(--colors_white);
 }
 
 .about-image {
@@ -132,10 +116,6 @@ header > ul {
   height: 140px;
   opacity: 0.3;
   transition: 0.5s;
-}
-
-.frameworks-icon:hover {
-  opacity: 1;
 }
 
 .framework-info {
@@ -165,6 +145,28 @@ header > ul {
 ::selection {
   background: var(--colors_gray);
   color: var(--colors_white);
+}
+
+@media (hover: hover) {
+  .header-item:hover {
+    text-decoration: underline;
+    color: var(--colors_white);
+  }
+
+  .general-description > a:hover {
+    color: var(--colors_white);
+  }
+
+  .general-button:hover {
+    background-color: var(--colors_black);
+    color: var(--colors_white);
+    border: 0.2rem solid rgb(255, 255, 255);
+    fill: var(--colors_white);
+  }
+
+  .frameworks-icon:hover {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 560px) {
