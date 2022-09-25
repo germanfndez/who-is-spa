@@ -57,6 +57,7 @@ const getFramework = () => {
 
 export const Framework = async () => {
   const framework = getFramework();
+  document.title = `${framework.name} / who is SPA`;
   return `
   <section class='general-container'>
     <h1 class='general-title'>${framework.name}  ${framework.svg}</h1>

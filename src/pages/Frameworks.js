@@ -1,4 +1,5 @@
 export const Frameworks = async () => {
+  document.title = 'Frameworks / who is SPA';
   return `
   <section class='general-container'>
     <h1 class='general-title'>Frameworks</h1>

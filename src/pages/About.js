@@ -1,4 +1,5 @@
 export const About = async () => {
+  document.title = 'About / who is SPA';
   return `
     <section class='general-container'>
       <h1 class='general-title'>About</h1>

@@ -33,7 +33,6 @@ const getPath = () => {
 };
 
 export const onRouteChanged = async () => {
-  console.log(getPath());
   const toRender = ROUTES[getPath()] ?? ROUTES['/not-found'];
   document.getElementById('main').innerHTML = await toRender();
 };

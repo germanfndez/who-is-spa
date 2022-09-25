@@ -1,4 +1,5 @@
 export const NotFound = () => {
+  document.title = 'Not found / who is SPA';
   return `
     <section class='general-container'>
       <h1 class='general-title'>Page not found</h1>
