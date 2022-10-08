@@ -140,6 +140,7 @@ header > ul {
   min-width: 50%;
   flex-direction: row;
   justify-content: space-between;
+  gap: 15px;
   overflow: hidden;
 }
 
