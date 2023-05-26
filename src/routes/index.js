@@ -1,3 +1,4 @@
+import { Header } from '../layout/Header';
 import { About } from '../pages/About';
 import { Framework } from '../pages/Framework.js';
 import { Frameworks } from '../pages/Frameworks';
@@ -34,5 +35,5 @@ const getPath = () => {
 
 export const onRouteChanged = async () => {
   const toRender = ROUTES[getPath()] ?? ROUTES['/not-found'];
-  document.getElementById('main').innerHTML = await toRender();
+  document.getElementById('main').innerHTML = `${Header()}${await toRender()}`;
 };
