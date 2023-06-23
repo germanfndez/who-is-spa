@@ -13,7 +13,7 @@ Everything starts in the `index.html`, there we find a simple `<main>` which is 
 
 `main.js` => here we have two events which will be pending the `load` and `hashchange` (the address or route has changed), when the event is invoked, our `router` - `onRouteChanged` function is in charge of the functionality.
 
-And **finally**, our router it handles **according to the url path render the appropriate (component or pages)**.
+And **finally**, our router it handles **according to the url path render the appropriate (`component` or `pages`)**.
 
 ## Check now
 
